@@ -28,7 +28,15 @@ class PmessageryServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app['pmessagery'] = $this->app->share(function($app)
+		{
+			return new Pmessagery($app['config']);
+		});
+		$this->app->booting(function()
+		{
+			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
+			$loader->alias('Pmessagery', 'Atrakeur\Pmessagery\Facades\Pmessagery');
+		});
 	}
 
 	/**
@@ -38,7 +46,7 @@ class PmessageryServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('pmessagery');
 	}
 
 }
