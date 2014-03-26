@@ -1,0 +1,27 @@
+{
+    "name": "atrakeur/pmessagery",
+    "description": "A private message system designed to work with laravel (and almost any user library)",
+    "license" : "MIT",
+    "keywords" : ["private", "messaging", "laravel"],
+    "authors": [
+        {
+            "name": "Atrakeur",
+            "email": "atrakeur@gmail.com",
+            "homepage": "http://www.atrakeur.com/"
+        }
+    ],
+    "support": {
+        "email": "atrakeur@gmail.com",
+        "issues": "https://github.com/atrakeur/laravel-pmessagery/issues"
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Atrakeur\\Pmessagery\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
